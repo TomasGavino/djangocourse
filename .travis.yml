@@ -8,7 +8,6 @@ services:
 before_script: pip install docker-compose
 
 script:
-  - pip install flake8
-  - docker-compose run app sh -c "python manage.py test"
+  - docker-compose run app sh -c "python manage.py test && flake8"
   
 
